@@ -11,7 +11,7 @@ namespace WetterApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string requestUrl = "http://api.openweathermap.org/data/2.5/weather?";
+        private readonly string requestUrl = "http://api.openweathermap.org/data/2.5/weather?";
 
         public MainWindow()
         {
@@ -52,7 +52,11 @@ namespace WetterApp
         {
             //try to retrieve api key from environment
             string apiKey = Environment.GetEnvironmentVariable("OpenWeatherMapApiKey");
-            if (apiKey == null) { MessageBox.Show("API Key not found in environment variables."); }
+
+            if (apiKey == null) 
+            { 
+               MessageBox.Show("API Key nicht in umgebungsvariablen gefunden."); 
+            }
 
             HttpClient httpClient = new HttpClient();
 
@@ -70,14 +74,14 @@ namespace WetterApp
         }
 
         //Calls UpdateUI method with querried city
-        private void searchButton_Click(object sender, RoutedEventArgs e)
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             string query = textboxQuery.Text;
             UpdateUI(query);
         }
 
         //clears textbox on click
-        private void textboxQuery_GotFocus(object sender, RoutedEventArgs e)
+        private void TextboxQuery_GotFocus(object sender, RoutedEventArgs e)
         {
             textboxQuery.Clear();
         }

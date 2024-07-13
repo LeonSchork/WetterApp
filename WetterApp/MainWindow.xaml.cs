@@ -12,6 +12,10 @@ namespace WetterApp
     public partial class MainWindow : Window
     {
         private readonly string requestUrl = "http://api.openweathermap.org/data/2.5/weather?";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 327e06fd41e081677a8964ac9c61d20623591ca1
         public MainWindow()
         {
             InitializeComponent();

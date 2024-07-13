@@ -61,7 +61,6 @@
         </Style>
     </Window.Resources>
     <Grid>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="56"></ColumnDefinition>
             <ColumnDefinition Width="278*"></ColumnDefinition>
@@ -70,7 +69,6 @@
             <ColumnDefinition Width="50*"></ColumnDefinition>
             <ColumnDefinition Width="9"></ColumnDefinition>
             <ColumnDefinition Width="55.998"></ColumnDefinition>
-
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"></RowDefinition>
@@ -80,7 +78,6 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
-
         <Grid.Background>
             <ImageBrush x:Name="backgroundImage" ImageSource="/WetterApp;component/images/Sun.png"></ImageBrush>
         </Grid.Background>
@@ -95,9 +92,9 @@
             </Label.Effect>
         </Label>
         <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Padding="5" CornerRadius="25" BorderThickness="1" Background="White" Margin="0,0,1,0">
-            <TextBox x:Name="textboxQuery" GotFocus="textboxQuery_GotFocus" TextAlignment="Center" Text="Gib eine Stadt ein" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Width="656" Grid.ColumnSpan="2" Height="40" Background="Transparent" BorderThickness="0,5,0,0" FontSize="20" Cursor="IBeam" VerticalAlignment="Center" BorderBrush="Transparent" ClipToBounds="True"/>
+            <TextBox x:Name="textboxQuery" GotFocus="TextboxQuery_GotFocus" TextAlignment="Center" Text="Gib eine Stadt ein" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Width="656" Grid.ColumnSpan="2" Height="40" Background="Transparent" BorderThickness="0,5,0,0" FontSize="20" Cursor="IBeam" VerticalAlignment="Center" BorderBrush="Transparent" ClipToBounds="True"/>
         </Border>
-        <Button Click="searchButton_Click" Style="{DynamicResource ButtonStyle1}" x:Name="searchButton" Grid.Column="4" Grid.Row="1" Padding="1"  IsDefault="True" Cursor="Hand" BorderThickness="0" Background="Transparent" FontSize="19" Margin="0">
+        <Button Click="SearchButton_Click" Style="{DynamicResource ButtonStyle1}" x:Name="searchButton" Grid.Column="4" Grid.Row="1" Padding="1"  IsDefault="True" Cursor="Hand" BorderThickness="0" Background="Transparent" FontSize="19" Margin="0">
             <Button.Content>
                 <Image Source="pack://application:,,,/images/refresh.png" RenderTransformOrigin="-3.36,0.505"/>
             </Button.Content>

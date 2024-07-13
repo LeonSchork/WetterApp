@@ -11,8 +11,6 @@ namespace WetterApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly string apiKey = "796ea9c7fabcf1ca11f27c1b5d556b1e";
-
         private string requestUrl = "http://api.openweathermap.org/data/2.5/weather?";
 
         public MainWindow()
@@ -52,6 +50,10 @@ namespace WetterApp
         //Api request to get weather data for given city
         public WeatherMapResponse GetWeatherData(string city)
         {
+            //try to retrieve api key from environment
+            string apiKey = Environment.GetEnvironmentVariable("OpenWeatherMapApiKey");
+            if (apiKey == null) { MessageBox.Show("API Key not found in environment variables."); }
+
             HttpClient httpClient = new HttpClient();
 
             //builds URI with querry and apikey
